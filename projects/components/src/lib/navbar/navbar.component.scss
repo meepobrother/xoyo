@@ -6,7 +6,8 @@ nav {
   height: 49px;
   background-color: rgb(255, 255, 255);
   border-bottom: 1px solid #f5f2ea;
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 102;
   > header,
   > div,

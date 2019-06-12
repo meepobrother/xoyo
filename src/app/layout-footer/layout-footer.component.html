@@ -1,3 +1,15 @@
 <xoyo-navbar [title]="'游戏中心'"></xoyo-navbar>
 <router-outlet></router-outlet>
-<xoyo-tabbar></xoyo-tabbar>
+
+<ng-template let-info #tabItem>
+  <a [routerLink]="['/'+info.link]" class="navLink">
+    <span>
+      <img [src]="info.picture">
+    </span>
+    <span>{{info?.title}}</span>
+  </a>
+</ng-template>
+
+<xoyo-tabbar [tabList]="tabList" [templateRef]="tabItem">
+
+</xoyo-tabbar>

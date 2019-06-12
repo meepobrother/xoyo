@@ -33,7 +33,11 @@ body {
   margin: 0px;
   padding: 0px;
 }
-
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 @font-face {
   font-family: elementIcons;
   src: url(./assets/fonts/element-icons.woff) format("woff"), url(./assets/fonts/element-icons.ttf) format("truetype");
