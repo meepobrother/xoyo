@@ -1,0 +1,10 @@
+<div [class]="cellItemLeft">
+    <ng-content></ng-content>
+    <span [class]="cellIcon">
+        <img [src]="icon" />
+    </span>
+    <span>{{title}}</span>
+</div>
+<div [class]="cellItemRight" [class.cell-arrow]="arrow">
+    <span class="right-text" *ngIf="tip">{{tip}}</span>
+</div>

@@ -1,0 +1,9 @@
+@import "../themes/variable.scss";
+:host {
+  &.#{$prefix}-rate {
+    display: inline-flex;
+    align-items: center;
+    font-size: 13px;
+    color: rgb(198, 198, 198);
+  }
+}

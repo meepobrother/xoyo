@@ -1,0 +1,10 @@
+@import "../themes/variable.scss";
+:host {
+  &.#{$prefix}-cell-icon {
+    width: $cellIconWidth;
+    display: inline-block;
+    img {
+      height: $cellIconHeight;
+    }
+  }
+}

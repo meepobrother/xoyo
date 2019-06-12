@@ -1,0 +1,69 @@
+@import "../themes/variable.scss";
+:host {
+  &.#{$prefix}-cell-item {
+    display: flex;
+    position: relative;
+    padding-left: $cellPaddingLeft;
+    padding-right: $cellPaddingRight;
+    overflow: hidden;
+    height: $cellItemHeight;
+    position: relative;
+    &:hover {
+      opacity: 0.9;
+      background-color: $cellItemActiveBgColor;
+    }
+    &:after {
+      content: " ";
+      position: absolute;
+      z-index: 0;
+      bottom: 0;
+      left: 0;
+      right: 0px;
+      height: 1px;
+      transform: scaleY(0.5);
+      transform-origin: 0 0;
+      background-color: #d9d9d9;
+    }
+  }
+}
+
+.#{$prefix}-cell-icon {
+  width: $cellIconWidth;
+  display: inline-block;
+  margin-right: 5px;
+  img {
+    max-height: $cellIconHeight;
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+.#{$prefix}-cell-left {
+  display: flex;
+  align-items: center;
+  color: $cellLeftColor;
+}
+
+.#{$prefix}-cell-right {
+  flex: 1;
+  width: 100%;
+  text-align: right;
+  justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  .right-text {
+    color: #c6c6c6;
+  }
+  &.cell-arrow {
+    &::after {
+      margin-left: 3px;
+      margin-right: 5px;
+      display: block;
+      font-family: iconfont;
+      font-size: 18px;
+      color: #c9c9c9;
+      content: "\e601";
+    }
+  }
+}

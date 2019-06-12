@@ -1,0 +1,12 @@
+@import "../themes/variable.scss";
+
+:host {
+  &.#{$prefix}-flexbox {
+    display: flex;
+    align-items: center;
+    &-vertical {
+      flex-direction: column;
+      height: 100%;
+    }
+  }
+}

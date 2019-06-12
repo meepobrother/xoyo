@@ -1,0 +1,15 @@
+@import "../themes/variable.scss";
+
+:host {
+  flex: 1;
+  color: #888;
+  width: 100%;
+  font-size: 14px;
+  padding-top: 5px;
+  &.#{$prefix}-flexbox-item-center {
+    align-self: center;
+    font-size: 13px;
+    padding-top: 8px;
+    align-items: center;
+  }
+}
