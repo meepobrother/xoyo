@@ -23,10 +23,12 @@ import { TabbarItemComponent } from './tabbar-item/tabbar-item.component';
 import { SectionTitleComponent } from './section-title/section-title.component';
 import { LinkListComponent } from './link-list/link-list.component';
 import { SectionOuterComponent } from './section-outer/section-outer.component';
+import { StringTemplateOutletDirective } from './string_template_outlet';
 @NgModule({
   declarations: [
     ComponentsComponent, NavListComponent, NavItemComponent,
     TabbarComponent, NavbarComponent, DrawerComponent, TabComponent,
+    TabbarItemComponent,
     ListComponent, ListItemComponent, CellComponent, CellItemComponent,
     UserCardComponent,
     IconComponent,
@@ -38,12 +40,14 @@ import { SectionOuterComponent } from './section-outer/section-outer.component';
     TabbarItemComponent,
     SectionTitleComponent,
     LinkListComponent,
-    SectionOuterComponent
+    SectionOuterComponent,
+    StringTemplateOutletDirective
   ],
   imports: [
     CommonModule
   ],
   exports: [
+    StringTemplateOutletDirective,
     ComponentsComponent, NavListComponent, NavItemComponent,
     TabbarComponent, NavbarComponent, DrawerComponent, TabComponent,
     ListComponent, ListItemComponent, CellComponent, CellItemComponent,
