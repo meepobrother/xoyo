@@ -20,6 +20,9 @@ import { FlexboxItemComponent } from './flexbox-item/flexbox-item.component';
 import { RateComponent } from './rate/rate.component';
 import { AuthIconComponent } from './auth-icon/auth-icon.component';
 import { TabbarItemComponent } from './tabbar-item/tabbar-item.component';
+import { SectionTitleComponent } from './section-title/section-title.component';
+import { LinkListComponent } from './link-list/link-list.component';
+import { SectionOuterComponent } from './section-outer/section-outer.component';
 @NgModule({
   declarations: [
     ComponentsComponent, NavListComponent, NavItemComponent,
@@ -32,7 +35,10 @@ import { TabbarItemComponent } from './tabbar-item/tabbar-item.component';
     FlexboxItemComponent,
     RateComponent,
     AuthIconComponent,
-    TabbarItemComponent
+    TabbarItemComponent,
+    SectionTitleComponent,
+    LinkListComponent,
+    SectionOuterComponent
   ],
   imports: [
     CommonModule
@@ -41,7 +47,8 @@ import { TabbarItemComponent } from './tabbar-item/tabbar-item.component';
     ComponentsComponent, NavListComponent, NavItemComponent,
     TabbarComponent, NavbarComponent, DrawerComponent, TabComponent,
     ListComponent, ListItemComponent, CellComponent, CellItemComponent,
-    UserCardComponent, IconComponent
+    UserCardComponent, IconComponent, SectionTitleComponent,
+    LinkListComponent, SectionOuterComponent
   ]
 })
 export class ComponentsModule { }

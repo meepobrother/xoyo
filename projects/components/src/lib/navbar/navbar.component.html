@@ -14,7 +14,7 @@
   </footer>
 </nav>
 
-<section [class]="layer" *ngIf="navOpen">
+<section [class]="layer" *ngIf="navOpen" (click)="navToogle()">
   <div [class]="layerContent">
     <div *ngFor="let item of navList">
       <img [src]="item.picture">
