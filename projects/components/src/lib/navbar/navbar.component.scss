@@ -1,0 +1,106 @@
+@import "../themes/variable.scss";
+
+nav {
+  display: flex;
+  align-items: center;
+  height: 49px;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid #f5f2ea;
+  position: relative;
+  z-index: 102;
+  > header,
+  > div,
+  > footer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  > header {
+    img {
+      height: 20px;
+      margin: 0 10px;
+    }
+  }
+  > div {
+    justify-content: center;
+    font-size: 15px;
+    color: #888;
+  }
+  footer {
+    display: flex;
+    justify-content: flex-end;
+    section {
+      width: 20px;
+      height: 15px;
+      position: relative;
+      margin: 0 10px;
+      span {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background: #888;
+        border-radius: 1px;
+        transition: 0.25s ease-in-out;
+        &:nth-child(1) {
+          top: 0px;
+        }
+        &:nth-child(2) {
+          top: 6px;
+        }
+        &:nth-child(3) {
+          top: 12px;
+        }
+      }
+    }
+    .open{
+      span{
+        &:nth-child(1) {
+          transform: rotate(135deg);
+          top: 6px;
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:nth-child(3) {
+          transform: rotate(-135deg);
+          top: 6px;
+        }
+      }
+
+    }
+  }
+}
+
+.#{$prefix}-layer {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 99;
+
+  .#{$prefix}-layer-content{
+    width: 135px;
+    position: fixed;
+    right: 7.5px;
+    top: 65px;
+    background: #fff;
+    border-radius: 5px;
+    >div{
+      text-align: center;
+      line-height: 41.672px;
+      img{
+        width: 16.5px;
+        vertical-align: middle;
+        margin-top: -4px;
+      }
+      span{
+        margin: 0 10px;
+        font-size: 14px;
+      }
+    }
+  }
+}

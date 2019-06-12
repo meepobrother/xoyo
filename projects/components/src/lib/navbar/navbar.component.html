@@ -1,3 +1,24 @@
-<p>
-  navbar works!
-</p>
+<nav>
+  <header>
+    <img src="//xoyo.xoyocdn.com/mobile/img/xoyo-logo.a606321a.png">
+  </header>
+  <div>
+    <span>{{this.title}}</span>
+  </div>
+  <footer>
+    <section (click)="navToogle()" [class.open]="navOpen">
+      <span></span>
+      <span></span>
+      <span></span>
+    </section>
+  </footer>
+</nav>
+
+<section [class]="layer" *ngIf="navOpen">
+  <div [class]="layerContent">
+    <div *ngFor="let item of navList">
+      <img [src]="item.picture">
+      <span>{{item.title}}</span>
+    </div>
+  </div>
+</section>
