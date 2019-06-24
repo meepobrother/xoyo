@@ -22,3 +22,4 @@ export * from './lib/navbar-item/navbar-item.component';
 
 
 
+export * from './lib/title.service';

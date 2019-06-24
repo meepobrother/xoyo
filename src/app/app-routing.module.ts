@@ -9,6 +9,7 @@ import { LayoutHeaderComponent } from './layout-header/layout-header.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ForgetComponent } from './forget/forget.component';
+import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
   {
@@ -86,6 +87,7 @@ const routes: Routes = [
   ],
   imports: [
     ComponentsModule,
+    CommonModule,
     RouterModule.forRoot(routes, {
       useHash: true
     })

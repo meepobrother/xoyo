@@ -25,6 +25,7 @@ import { LinkListComponent } from './link-list/link-list.component';
 import { SectionOuterComponent } from './section-outer/section-outer.component';
 import { ToogleBtnComponent } from './toogle-btn/toogle-btn.component';
 import { NavbarItemComponent } from './navbar-item/navbar-item.component';
+import { ButtonComponent } from './button/button.component';
 
 const components = [
   ComponentsComponent,
@@ -50,12 +51,14 @@ const components = [
   SectionTitleComponent,
   LinkListComponent,
   SectionOuterComponent,
-  ToogleBtnComponent
+  ToogleBtnComponent,
+  NavbarItemComponent,
+  ButtonComponent,
 ];
+
 @NgModule({
   declarations: [
-    ...components,
-    NavbarItemComponent
+    ...components
   ],
   imports: [
     CommonModule

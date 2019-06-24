@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, TemplateRef, ContentChild } from '@angular/core';
+import { Component, OnInit, Input, TemplateRef, EventEmitter, ContentChild, Output } from '@angular/core';
 import { prefix } from '../core';
 import { NavbarItemInfo } from '../navbar-item/navbar-item.component';
 @Component({
@@ -8,6 +8,9 @@ import { NavbarItemInfo } from '../navbar-item/navbar-item.component';
 })
 export class NavbarComponent implements OnInit {
   @Input() title: string;
+  @Output()
+  titleChange: EventEmitter<string> = new EventEmitter();
+
   navOpen = false;
   @ContentChild(TemplateRef, { static: false })
   templateRef: TemplateRef<NavbarItemInfo>;
