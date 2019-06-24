@@ -23,36 +23,45 @@ import { TabbarItemComponent } from './tabbar-item/tabbar-item.component';
 import { SectionTitleComponent } from './section-title/section-title.component';
 import { LinkListComponent } from './link-list/link-list.component';
 import { SectionOuterComponent } from './section-outer/section-outer.component';
-import { StringTemplateOutletDirective } from './string_template_outlet';
+import { ToogleBtnComponent } from './toogle-btn/toogle-btn.component';
+import { NavbarItemComponent } from './navbar-item/navbar-item.component';
+
+const components = [
+  ComponentsComponent,
+  NavListComponent,
+  NavItemComponent,
+  TabbarComponent,
+  NavbarComponent,
+  DrawerComponent,
+  TabComponent,
+  TabbarItemComponent,
+  ListComponent,
+  ListItemComponent,
+  CellComponent,
+  CellItemComponent,
+  UserCardComponent,
+  IconComponent,
+  AvatarComponent,
+  FlexboxComponent,
+  FlexboxItemComponent,
+  RateComponent,
+  AuthIconComponent,
+  TabbarItemComponent,
+  SectionTitleComponent,
+  LinkListComponent,
+  SectionOuterComponent,
+  ToogleBtnComponent
+];
 @NgModule({
   declarations: [
-    ComponentsComponent, NavListComponent, NavItemComponent,
-    TabbarComponent, NavbarComponent, DrawerComponent, TabComponent,
-    TabbarItemComponent,
-    ListComponent, ListItemComponent, CellComponent, CellItemComponent,
-    UserCardComponent,
-    IconComponent,
-    AvatarComponent,
-    FlexboxComponent,
-    FlexboxItemComponent,
-    RateComponent,
-    AuthIconComponent,
-    TabbarItemComponent,
-    SectionTitleComponent,
-    LinkListComponent,
-    SectionOuterComponent,
-    StringTemplateOutletDirective
+    ...components,
+    NavbarItemComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    StringTemplateOutletDirective,
-    ComponentsComponent, NavListComponent, NavItemComponent,
-    TabbarComponent, NavbarComponent, DrawerComponent, TabComponent,
-    ListComponent, ListItemComponent, CellComponent, CellItemComponent,
-    UserCardComponent, IconComponent, SectionTitleComponent,
-    LinkListComponent, SectionOuterComponent
+    ...components
   ]
 })
 export class ComponentsModule { }

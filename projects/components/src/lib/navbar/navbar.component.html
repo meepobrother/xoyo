@@ -6,19 +6,12 @@
     <span>{{this.title}}</span>
   </div>
   <footer>
-    <section (click)="navToogle()" [class.open]="navOpen">
-      <span></span>
-      <span></span>
-      <span></span>
-    </section>
+    <xoyo-toogle-btn [(open)]="navOpen"></xoyo-toogle-btn>
   </footer>
 </nav>
 
 <section [class]="layer" *ngIf="navOpen" (click)="navToogle()">
   <div [class]="layerContent">
-    <div *ngFor="let item of navList">
-      <img [src]="item.picture">
-      <span>{{item.title}}</span>
-    </div>
+    <xoyo-navbar-item [templateRef]="templateRef" [info]="info" *ngFor="let info of list;"></xoyo-navbar-item>
   </div>
 </section>

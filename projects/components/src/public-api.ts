@@ -17,8 +17,7 @@ export * from './lib/navbar/navbar.component';
 export * from './lib/tab/tab.component';
 export * from './lib/tabbar/tabbar.component';
 export * from './lib/user-card/user-card.component';
-
-
+export * from './lib/navbar-item/navbar-item.component';
 
 
 

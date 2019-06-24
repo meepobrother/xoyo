@@ -1,0 +1,40 @@
+:host {
+  width: 20px;
+  height: 15px;
+  position: relative;
+  margin: 0 10px;
+  &.open {
+    span {
+      &:nth-child(1) {
+        transform: rotate(135deg);
+        top: 6px;
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        transform: rotate(-135deg);
+        top: 6px;
+      }
+    }
+  }
+}
+
+span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #888;
+  border-radius: 1px;
+  transition: 0.25s ease-in-out;
+  &:nth-child(1) {
+    top: 0px;
+  }
+  &:nth-child(2) {
+    top: 6px;
+  }
+  &:nth-child(3) {
+    top: 12px;
+  }
+}

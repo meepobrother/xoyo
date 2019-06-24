@@ -7,7 +7,10 @@ import { RouterModule } from '@angular/router';
         ComponentsModule,
         RouterModule.forChild([{
             path: '',
-            component: ProfileComponent
+            component: ProfileComponent,
+            data: {
+                title: '个人中心'
+            }
         }])
     ],
     declarations: [

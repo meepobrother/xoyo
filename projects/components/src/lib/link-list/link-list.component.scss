@@ -1,18 +1,18 @@
 ul {
   display: flex;
   flex-wrap: wrap;
-  li{
+  li {
     width: 25%;
     text-align: center;
     font-size: 12px;
-    >div:first-child{
+    > div:first-child {
       margin-bottom: 10px;
     }
-    img{
+    img {
       height: 25px;
     }
   }
-  .listWrap{
+  .listWrap {
     margin-bottom: 25px;
   }
 }

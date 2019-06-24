@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewChild, TemplateRef } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { NavbarItemInfo } from '@xoyo/components';
 @Component({
   selector: 'app-layout-footer',
   templateUrl: './layout-footer.component.html',
@@ -28,8 +29,37 @@ export class LayoutFooterComponent implements OnInit {
     link: 'profile',
   }];
 
+  navList: NavbarItemInfo[] = [
+    {
+      title: '首　　页',
+      picture: '//xoyo.xoyocdn.com/mobile/img/icon-drawer-home.809983da.png',
+      link: 'home'
+    },
+    {
+      title: '游戏中心',
+      picture: '//xoyo.xoyocdn.com/mobile/img/icon-drawer-game.38ed066d.png',
+      link: 'game-center'
+    },
+    {
+      title: '充值中心',
+      picture: '//xoyo.xoyocdn.com/mobile/img/icon-drawer-charge.8c100f24.png',
+      link: 'charge'
+    },
+    {
+      title: '安全中心',
+      picture: '//xoyo.xoyocdn.com/mobile/img/icon-drawer-security.a331b7fc.png',
+      link: 'security'
+    },
+    {
+      title: '个人中心',
+      picture: '//xoyo.xoyocdn.com/mobile/img/icon-drawer-ucenter.4f6dcc95.png',
+      link: 'profile'
+    }
+  ];
 
-  constructor() { }
+  constructor(public store: Store<any>) {
+    this.store.select('router').subscribe(res => console.log(res));
+  }
 
   ngOnInit() { }
 }
