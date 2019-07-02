@@ -1,0 +1,22 @@
+:host {
+  border-bottom: 1px solid #e4e4e4;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-item {
+  &-label {
+    float: left;
+    color: #353535;
+    margin-right: 20px;
+  }
+  &-content {
+    position: relative;
+    font-size: 14px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

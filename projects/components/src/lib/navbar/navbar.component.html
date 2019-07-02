@@ -1,14 +1,14 @@
-<nav>
-  <header>
-    <img src="//xoyo.xoyocdn.com/mobile/img/xoyo-logo.a606321a.png">
-  </header>
-  <div>
-    <span>{{this.title}}</span>
-  </div>
-  <footer>
-    <xoyo-toogle-btn [(open)]="navOpen"></xoyo-toogle-btn>
-  </footer>
-</nav>
+<div class="navbar-item left" (click)="doClick()">
+  <span [class.header-go-back]="isBack" [class.header-logo]="!isBack">
+    <img [src]="leftIcon">
+  </span>
+</div>
+<div class="navbar-center">
+  <span>{{this.title}}</span>
+</div>
+<div class="navbar-item right">
+  <xoyo-toogle-btn [(open)]="navOpen"></xoyo-toogle-btn>
+</div>
 
 <section [class]="layer" *ngIf="navOpen" (click)="navToogle()">
   <div [class]="layerContent">

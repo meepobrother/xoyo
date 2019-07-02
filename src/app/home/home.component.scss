@@ -1,0 +1,63 @@
+.slider {
+  height: 112px;
+  img {
+    height: 100%;
+  }
+}
+
+.recommend-items {
+  display: flex;
+  a {
+    flex: 1;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.custom-phone-box {
+  display: flex;
+  position: relative;
+  z-index: 2;
+  height: 45px;
+  margin-top: 15px;
+  .custom-phone-box-item {
+    height: 100%;
+    line-height: 1.5;
+    text-align: center;
+    color: #403b3c;
+    flex: 1;
+    .custom-phone-box-item-text {
+      font-size: 12px;
+    }
+    .custom-phone-box-item-tel {
+      font-size: 15px;
+      font-weight: bold;
+      text-decoration: none;
+      color: inherit;
+    }
+    img {
+      display: inline-block;
+      height: 100%;
+    }
+  }
+}
+
+.copyright-text {
+  color: #888888;
+  font-size: 12px;
+  margin-top: 20px;
+  line-height: 1.2;
+}
+
+.company-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12.5px;
+  img {
+    display: inline-block;
+    margin: 0 12.5px;
+    width: 55.5px;
+  }
+}

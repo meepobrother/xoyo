@@ -1,17 +1,50 @@
+<div class="slider">
+  <img src="https://content.xoyo.com/uploadfile/2019/0430/20190430093220177.jpg" alt="">
+</div>
+
 <xoyo-section-outer>
   <xoyo-section-title [title]="'安全中心'"></xoyo-section-title>
-  <xoyo-link-list [dataList]="securityList"></xoyo-link-list>
+  <xoyo-link-list (whenClick)="doClick($event)" [dataList]="securityList"></xoyo-link-list>
 </xoyo-section-outer>
 
 <xoyo-section-outer>
   <xoyo-section-title [title]="'个人中心'"></xoyo-section-title>
-  <xoyo-link-list [dataList]="mineList"></xoyo-link-list>
+  <xoyo-link-list (whenClick)="doClick($event)" [dataList]="mineList"></xoyo-link-list>
 </xoyo-section-outer>
 
 <xoyo-section-outer>
   <xoyo-section-title [title]="'为您推荐'"></xoyo-section-title>
+  <div class="recommend-items">
+    <a href="" style="padding-right: 5px;">
+      <img src="//xoyo.xoyocdn.com/mobile/img/img-index-recommend-game.2dea52bf.png" alt="">
+    </a>
+    <a href="" style="padding-left: 5px;">
+      <img src="//xoyo.xoyocdn.com/mobile/img/img-index-recommend-tool.f3567367.png" alt="">
+    </a>
+  </div>
 </xoyo-section-outer>
 
 <xoyo-section-outer>
   <xoyo-section-title [title]="'客服中心'"></xoyo-section-title>
+  <div class="custom-phone-box">
+    <div class="custom-phone-box-item">
+      <p class="custom-phone-box-item-text">7x24小时服务电话</p> <a href="tel:02885437733"
+        class="custom-phone-box-item-tel">028-85437733</a>
+    </div>
+    <div class="custom-phone-box-item"><img data-v-1f32122e=""
+        src="//xoyo.xoyocdn.com/mobile/img/icon-telephone.31265f78.png" alt=""></div>
+    <div class="custom-phone-box-item">
+      <p class="custom-phone-box-item-text">VIP专属热线电话</p> <a href="tel:02885309999"
+        class="custom-phone-box-item-tel">028-85309999</a>
+    </div>
+  </div>
 </xoyo-section-outer>
+
+<p align="center" class="copyright-text">
+  Copyright © 1999-2019 成都西山居世游科技有限公司
+</p>
+
+<div class="company-logos">
+  <img src="//xoyo.xoyocdn.com/mobile/img/logo-kingsoft.0000409b.png" alt="">
+  <img src="//xoyo.xoyocdn.com/mobile/img/logo-xsj.09886d97.png" alt="">
+</div>

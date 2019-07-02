@@ -1,4 +1,4 @@
-<xoyo-navbar [title]="app.title|async" [list]="app.navList|async">
+<xoyo-navbar leftIcon="//xoyo.xoyocdn.com/mobile/img/xoyo-logo.a606321a.png" [title]="app.title|async" [list]="app.navList|async">
   <ng-template let-info>
     <div class="nav_item" [routerLink]="['/'+info.link]">
       <img class="icon" [src]="info.picture" alt="">
@@ -15,4 +15,5 @@
     <span>{{info?.title}}</span>
   </a>
 </ng-template>
+<div class="h55"></div>
 <xoyo-tabbar [tabList]="app.tabList|async" [templateRef]="tabItem"></xoyo-tabbar>

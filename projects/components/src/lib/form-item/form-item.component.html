@@ -1,0 +1,9 @@
+<div class="form-item-label" *ngIf="isLabelString">
+    {{label}}
+</div>
+<div class="form-item-label" *ngIf="!isLabelString">
+    <ng-container *ngTemplateOutlet="label"></ng-container>
+</div>
+<div class="form-item-content">
+    <ng-content></ng-content>
+</div>

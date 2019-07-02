@@ -1,0 +1,30 @@
+:host {
+  &.top-tap {
+    width: 258px;
+    height: 38px;
+    position: relative;
+    margin: 0 auto 20px auto;
+    border-bottom: 1px solid #f5f2ea;
+    display: flex;
+  }
+}
+.top-tap-item {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  &.active {
+    border-bottom: 2px solid #f7d073;
+  }
+  &-icon {
+    display: inline-block;
+    width: 19.5px;
+    margin-right: 5px;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}

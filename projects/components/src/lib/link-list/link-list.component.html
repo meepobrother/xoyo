@@ -1,5 +1,5 @@
 <ul>
-  <li *ngFor="let item of dataList" [class.listWrap]="listWrap">
+  <li (click)="doClick(item)" *ngFor="let item of dataList" [class.listWrap]="listWrap">
     <div>
       <img [src]="item.picture">
     </div>

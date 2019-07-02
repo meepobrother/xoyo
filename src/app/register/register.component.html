@@ -1,3 +1,50 @@
-<p>
-  register works!
-</p>
+<div class="logo">
+  <img src="//xoyo.xoyocdn.com/mobile/img/logo-xoyo-signin.021be6ce.png" alt="">
+</div>
+
+<xoyo-form-item *ngFor="let item of list" [label]="label">
+  <ng-template #label>
+    {{item.label}}
+  </ng-template>
+  <xoyo-input [placeholder]="item.placeholder" [disabled]="item.disabled" [value]="item.value"></xoyo-input>
+  <div *ngIf="item.isCode" class="el-input-group__append">
+    <button type="button" class="common-send-code send-code">获取验证码</button>
+  </div>
+</xoyo-form-item>
+
+<xoyo-button>
+  下一步
+</xoyo-button>
+
+<div class="tab-box">
+  <div class="tab-box-title">
+    其他注册方式
+  </div>
+  <div class="tab-box-content">
+    <div class="tab-box-item">
+      <div class="icon">
+        <img style="width: 17px;" src="//xoyo.xoyocdn.com/mobile/img/icon-phone-purple.6605576a.png"
+          alt="">
+      </div>
+      <div class="title">
+        手机注册
+      </div>
+    </div>
+    <div class="tab-box-item">
+      <div class="icon">
+        <img style="width: 26px;" src="//xoyo.xoyocdn.com/mobile/img/icon-mail-red.1ae8b6f3.png" alt="">
+      </div>
+      <div class="title">
+        邮箱注册
+      </div>
+    </div>
+    <div class="tab-box-item">
+      <div class="icon">
+        <img style="width: 22.5px" src="//xoyo.xoyocdn.com/mobile/img/icon-register-yellow.7e6c4f72.png" alt="">
+      </div>
+      <div class="title">
+        普通注册
+      </div>
+    </div>
+  </div>
+</div>

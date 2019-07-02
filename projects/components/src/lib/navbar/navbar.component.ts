@@ -7,14 +7,28 @@ import { NavbarItemInfo } from '../navbar-item/navbar-item.component';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+  @Input()
+  leftIcon: string;
+
+  @Input()
+  isBack: boolean = false;
+
+  @Output()
+  whenIconClick: EventEmitter<any> = new EventEmitter();
+
   @Input() title: string;
+
   @Output()
   titleChange: EventEmitter<string> = new EventEmitter();
 
   navOpen = false;
+
   @ContentChild(TemplateRef, { static: false })
   templateRef: TemplateRef<NavbarItemInfo>;
+
   @Input() list: NavbarItemInfo[] = [];
+
+  
   get layer() {
     return `${prefix}-layer`;
   }
@@ -25,5 +39,9 @@ export class NavbarComponent implements OnInit {
   ngOnInit() { }
   navToogle() {
     this.navOpen = !this.navOpen;
+  }
+  doClick() {
+    console.log(`do click`)
+    this.whenIconClick.next();
   }
 }

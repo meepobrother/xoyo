@@ -26,6 +26,12 @@ import { SectionOuterComponent } from './section-outer/section-outer.component';
 import { ToogleBtnComponent } from './toogle-btn/toogle-btn.component';
 import { NavbarItemComponent } from './navbar-item/navbar-item.component';
 import { ButtonComponent } from './button/button.component';
+import { FunctionBtnComponent } from './function-btn/function-btn.component';
+import { InputComponent } from './input/input.component';
+import { BlockTitleComponent } from './block-title/block-title.component';
+import { TopTapComponent } from './top-tap/top-tap.component';
+import { FormItemComponent } from './form-item/form-item.component';
+import { ListRadioComponent } from './list-radio/list-radio.component';
 
 const components = [
   ComponentsComponent,
@@ -54,11 +60,17 @@ const components = [
   ToogleBtnComponent,
   NavbarItemComponent,
   ButtonComponent,
+  FunctionBtnComponent,
+  InputComponent,
+  BlockTitleComponent,
+  TopTapComponent,
+  FormItemComponent
 ];
 
 @NgModule({
   declarations: [
-    ...components
+    ...components,
+    ListRadioComponent
   ],
   imports: [
     CommonModule

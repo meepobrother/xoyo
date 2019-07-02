@@ -26,5 +26,8 @@
         "projects/components/src"
       ]
     }
+  },
+  "angularCompilerOptions": {
+    "enableIvy": true
   }
 }

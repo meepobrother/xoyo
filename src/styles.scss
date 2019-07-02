@@ -1,6 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import "normalize.css";
 @import "./assets/iconfont/iconfont.css";
+body,
+html {
+  background-color: #fffefa !important;
+}
 
 *,
 :after,
@@ -33,7 +37,7 @@ body {
   margin: 0px;
   padding: 0px;
 }
-ul{
+ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -48,4 +52,59 @@ ul{
 @font-face {
   font-family: yduiInlay;
   src: url(./assets/fonts/font.ttf) format("truetype");
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a,
+a:hover {
+  text-decoration: none;
+}
+a {
+  color: inherit;
+}
+a {
+  background-color: transparent;
+}
+input {
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  text-rendering: auto;
+  cursor: text;
+  text-align: start;
+}
+
+p {
+  font-size: 12px;
+}
+
+.send-code {
+  width: 91px;
+  height: 21px;
+  border: 1px solid #f7d073;
+  border-radius: 50px;
+  background-color: transparent;
+  vertical-align: baseline;
+  font: 100% tahoma, \5b8b\4f53, arial;
+}
+
+.tips-color {
+  color: #888;
+  padding: 10px 0px;
+}
+
+.color-blue {
+  color: #85aff0;
 }

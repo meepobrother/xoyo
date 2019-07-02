@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-profile',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
   featureList: { picture: string; desc: string; }[];
-  constructor() {
+  constructor(public app: AppService) {
+    this.app.setTitle(`profile`);
     this.featureList = [{
       picture: '//xoyo.xoyocdn.com/mobile/img/icon-balance.08efc043.png',
       desc: '余额查询',

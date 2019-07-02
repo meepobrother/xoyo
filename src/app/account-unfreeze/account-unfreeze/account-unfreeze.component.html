@@ -1,3 +1,20 @@
-<p>
-  account-unfreeze works!
+<xoyo-top-tap [tabs]="tabs"></xoyo-top-tap>
+
+<xoyo-form-item *ngFor="let item of list" [label]="label">
+  <ng-template #label>
+    {{item.label}}
+  </ng-template>
+  <xoyo-input [placeholder]="item.placeholder" [disabled]="item.disabled" [value]="item.value"></xoyo-input>
+  <div *ngIf="item.isCode" class="el-input-group__append">
+    <button type="button" class="common-send-code send-code">获取验证码</button>
+  </div>
+</xoyo-form-item>
+
+<xoyo-button>
+  <span>下一步</span>
+</xoyo-button>
+
+<p align="center" class="tips-color">
+  如有疑问，请
+  <a href="https://kefu.xoyo.com/index.php?r=gamelist" class="color-blue">联系客服</a>
 </p>

@@ -10,8 +10,20 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ForgetComponent } from './forget/forget.component';
 import { CommonModule } from '@angular/common';
+import { ChangePasswordComponent } from './change-password/change-password.component';
+import { AccountFreezeComponent } from './account-freeze/account-freeze/account-freeze.component';
+import { AccountUnfreezeComponent } from './account-unfreeze/account-unfreeze/account-unfreeze.component';
+import { KickComponent } from './kick/kick.component';
+import { IdentityAuthComponent } from './identity-auth/identity-auth.component';
+import { BalanceComponent } from './balance/balance.component';
+import { ChargeRecordComponent } from './charge-record/charge-record.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
   {
     path: '',
     component: LayoutHeaderComponent,
@@ -33,6 +45,30 @@ const routes: Routes = [
       data: {
         title: '忘记密码'
       }
+    }, {
+      path: 'change-password',
+      component: ChangePasswordComponent
+    }, {
+      path: 'account-freeze',
+      loadChildren: './account-freeze/account-freeze.module#AccountFreezeModule'
+    }, {
+      path: 'account-unfreeze',
+      loadChildren: './account-unfreeze/account-unfreeze.module#AccountUnfreezeModule'
+    }, {
+      path: 'kick',
+      component: KickComponent
+    }, {
+      path: 'change-password',
+      component: ChangePasswordComponent
+    }, {
+      path: 'identity-auth',
+      component: IdentityAuthComponent
+    }, {
+      path: 'balance',
+      component: BalanceComponent
+    }, {
+      path: 'charge-record',
+      component: ChargeRecordComponent
     }]
   },
   {
@@ -83,7 +119,12 @@ const routes: Routes = [
     LoginComponent,
     RegisterComponent,
     LayoutDefaultComponent,
-    ForgetComponent
+    ForgetComponent,
+    ChangePasswordComponent,
+    KickComponent,
+    IdentityAuthComponent,
+    BalanceComponent,
+    ChargeRecordComponent
   ],
   imports: [
     ComponentsModule,

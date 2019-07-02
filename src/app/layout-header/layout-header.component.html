@@ -1,2 +1,9 @@
-<xoyo-navbar [title]="'游戏中心'"></xoyo-navbar>
+<xoyo-navbar (whenIconClick)="doBack()" [isBack]="isBack" leftIcon="//xoyo.xoyocdn.com/mobile/img/icon-arrow-left.46d84d56.png" [title]="app.title|async" [list]="app.navList|async">
+    <ng-template let-info>
+        <div class="nav_item" [routerLink]="['/'+info.link]">
+            <img class="icon" [src]="info.picture" alt="">
+            <span class="title">{{info.title}}</span>
+        </div>
+    </ng-template>
+</xoyo-navbar>
 <router-outlet></router-outlet>

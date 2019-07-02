@@ -19,7 +19,7 @@ export * from './lib/tabbar/tabbar.component';
 export * from './lib/user-card/user-card.component';
 export * from './lib/navbar-item/navbar-item.component';
 
-
-
+export * from './lib/top-tap/top-tap.component';
+export * from './lib/link-list/link-list.component';
 
 export * from './lib/title.service';

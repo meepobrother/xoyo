@@ -1,0 +1,8 @@
+<div class="top-tap-item" (click)="setActiveTab(item)" [class.active]="item.active" *ngFor="let item of tabs">
+    <span class="top-tap-item-icon">
+        <img *ngIf="checkImageIsString(item)" [src]="item.image" align="center">
+        <img *ngIf="!checkImageIsString(item)" [src]="item.image.src" [style.width]="item.image.width"
+            align="center">
+    </span>
+    <span class="top-tap-item-text">{{item.title}}</span>
+</div>

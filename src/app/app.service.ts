@@ -1,6 +1,7 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 import { NavbarItemInfo } from '@xoyo/components';
 import { BehaviorSubject } from 'rxjs';
+import { DOCUMENT } from '@angular/common';
 @Injectable({
   providedIn: 'root'
 })
@@ -8,14 +9,24 @@ export class AppService {
   navList: BehaviorSubject<NavbarItemInfo[]> = new BehaviorSubject([]);
   tabList: BehaviorSubject<NavbarItemInfo[]> = new BehaviorSubject([]);
   title: BehaviorSubject<string> = new BehaviorSubject(``);
-  constructor() { }
+  titleMap: { [key: string]: string } = {};
+  constructor(@Inject(DOCUMENT) public doc: Document) { }
   async init() {
-    this.setTitle();
+    this.titleMap = {
+      home: ``,
+      profile: `个人中心`,
+      security: `安全中心`,
+      charge: `充值`,
+      [`game-center`]: `游戏中心`
+    };
+    this.setTitle(``);
     this.setTabList();
     this.setNavList();
   }
-  setTitle() {
-    this.title.next(`滴答滴答`);
+  setTitle(name: string) {
+    const title = this.titleMap[name];
+    this.title.next(title);
+    this.doc.title = title;
   }
   setTabList() {
     this.tabList.next([{
